@@ -3,7 +3,6 @@ import os
 from collections import OrderedDict
 
 import pytest
-from six import PY2
 
 import great_expectations as ge
 from great_expectations.data_context.util import file_relative_path
@@ -458,6 +457,4 @@ def test_snapshot_BasicDatasetProfiler_on_titanic():
     del evrs.meta["run_id"]
     del evrs.meta["batch_kwargs"]["ge_batch_id"]
 
-    # DISABLE TEST IN PY2 BECAUSE OF ORDER ISSUE AND NEAR-EOL
-    if not PY2:
-        assert expected_evrs == evrs
+    assert expected_evrs == evrs
