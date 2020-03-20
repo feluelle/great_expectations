@@ -3,6 +3,9 @@
 develop
 -----------------
 
+**Breaking**
+
+* Renamed all ``generator`` parameters and methods to the more correct ``batch_kwarg_generator`` language
 
 0.9.7
 -----------------
